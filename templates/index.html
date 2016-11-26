@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home.
+{% endblock %}
+{% block main %}
+
+
+<script type="text/javascript">
+  function load() {
+   document.getElementById('delete').style.display = "none";
+   document.getElementById('load').style.display = "block";
+   document.getElementById('img_cont').style.display = "none";
+   document.getElementById('title').style.display = "none";
+   document.getElementById('politics').style.display = "none";
+  }
+   
+</script>
+
+<h1 id= "title"> CHOOSE MILK.</h1>
+
+
+<form id="img_cont"action="{{ url_for('index') }}" method="post" onsubmit="load()">
+  <div id="milk"/><button type="submit" name="milk" value="chocolate"><img src="https://soylent-production-herokuapp-com.
+global.ssl.fastly.net/static/images/home/coffiest.d1308ee2bb8b.jpg"></button></div>
+    <div id="milk"/><button type="submit" name="milk" value="skimmed"><img src="https://soylent-production-herokuapp-com.
+global.ssl.fastly.net/static/images/home/coffiest.d1308ee2bb8b.jpg"></button></div>
+  <div id="milk"/><button type="submit" name="milk" value="whole"><img src="https://soylent-production-herokuapp-com.
+global.ssl.fastly.net/static/images/home/coffiest.d1308ee2bb8b.jpg"></button></div>
+</form>
+
+<!-- <form id="politics" action="{{ url_for('index') }}" method="post">
+  <br><br><button type="submit" name="milk" value="No Politics"><h1 style="color: #960018;">NO POLITICS</h1></button>
+</form>
+--> 
+
+<a id= "delete" href="{{ url_for('deliver') }}"><button><h1 style="color: white;">deliver my milk</h1></button></a>
+  <div id="load" style="display: none;"><h1>serving milk...</h1></div>
+  
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block main %}
+    <form id="deliver" action="{{ url_for('deliver') }}" method="post">
+        <input name="email" placeholder="Email" type="text"/>
+        <button type="submit"><h1 style="color: white;">deliver?</h1></button>
+    </form>
+{% endblock %}

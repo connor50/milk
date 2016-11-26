@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home.
+{% endblock %}
+{% block main %}
+<div id="type">
+	<a href="{{ url_for('index') }}"><img src="static/arrow.svg" alt="back"></a>
+	<h1 style="color:#3F1F09;"> {{ milk }}</h1>
+</div>
+
+{% for article in news %}
+	<article>
+	<a href={{ article.url }}><img src= {{ article.urlToImage }}></></a>
+	<h2>{{ article.title }}</h2>
+	<p>{{ article.description }}</p>
+	</article>
+	{% endfor %}
+{% endblock %}
