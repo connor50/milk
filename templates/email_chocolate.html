@@ -3,6 +3,9 @@
 	<H1> Milk. </H1>
 	<h1 style="color:#3F1F09;"> This is {{ milk }} milk. Enjoy sweet chocolate news, delivered to your doorstep (sort of). </h1>
 
+<!-- renders each article from news data for this particular type of milk
+	then uses the article object for the news, image, title and description
+-->
 {% for article in news %}
 	<article>
 	<a href={{ article.url }}><img src= {{ article.urlToImage }}></></a>

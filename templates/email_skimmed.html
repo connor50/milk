@@ -3,6 +3,10 @@
 	<H1> Milk. </H1>
 		<h1 style="color:black;"> This is {{ milk }} milk. Enjoy fat free news, delivered to your doorstep (sort of). </h1>
 </div>
+
+<!-- renders each article from news data for this particular type of milk
+	then uses the article object for the title and description
+-->
 {% for article in news %}
 	<article>
 	<h2>{{ article.title }}</h2>

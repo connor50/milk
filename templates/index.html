@@ -5,7 +5,7 @@
 {% endblock %}
 {% block main %}
 
-
+<!-- JS for the function when serving milk, it clears the main page -->
 <script type="text/javascript">
   function load() {
    document.getElementById('delete').style.display = "none";
@@ -19,25 +19,14 @@
 
 <h1 id= "title"> CHOOSE MILK.</h1>
 
-
+<!-- form for selecting type of milk based on images -->
 <form id="img_cont"action="{{ url_for('index') }}" method="post" onsubmit="load()">
     <div id="wrapper">
-  <div id="milk"/><button type="submit" name="milk" value="chocolate"><img src="https://soylent-production-herokuapp-com.
-global.ssl.fastly.net/static/images/home/coffiest.d1308ee2bb8b.jpg"></button></div>
-    <div id="milk"/><button type="submit" name="milk" value="skimmed"><img src="https://soylent-production-herokuapp-com.
-global.ssl.fastly.net/static/images/home/coffiest.d1308ee2bb8b.jpg"></button></div>
-  <div id="milk"/><button type="submit" name="milk" value="whole"><img src="https://soylent-production-herokuapp-com.
-global.ssl.fastly.net/static/images/home/coffiest.d1308ee2bb8b.jpg"></button></div>
+  <div id="milk"/><button type="submit" name="milk" value="chocolate"><img src="static/chocolate.png"></button></div>
+    <div id="milk"/><button type="submit" name="milk" value="skimmed"><img src="static/skimmed.png"></button></div>
+  <div id="milk"/><button type="submit" name="milk" value="whole"><img src="static/whole.png"></button></div>
 </div>
-</form>
-
-<!-- <form id="politics" action="{{ url_for('index') }}" method="post">
-  <br><br><button type="submit" name="milk" value="No Politics"><h1 style="color: #960018;">NO POLITICS</h1></button>
-</form>
---> 
-
+</form><br><br><br>
 <a id= "delete" href="{{ url_for('deliver') }}"><button><h1 style="color: white; font-size: calc(2rem + 2vw);">deliver my milk</h1></button></a>
   <div id="load" style="display: none;"><h1>serving milk...</h1></div>
- 
- <a id= "delete" href="{{ url_for('success')}}"><button><h1 style="color: white; font-size: calc(2rem + 2vw);">check</h1></button></a>
 {% endblock %}

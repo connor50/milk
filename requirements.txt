@@ -3,3 +3,5 @@ Flask-Session
 passlib
 nltk
 SQLAlchemy
+flask-mail 
+cs50

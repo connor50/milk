@@ -6,7 +6,12 @@ Design
 		After scouring the web and discovering the News API, I thought that a dynamic web based app would be the best way to implement, 
 		a news-filtering website. Drawing inspiration from my solution to Sentiments PSET, I decided to reimplement that concept
 		in python for the current news rather than a user's tweets.
-		The web app also dynamically resizes so can be viewed on mobile as well. This seemed the best fit for the final project. 
+		The web app also dynamically resizes so can be viewed on mobile as well. This seemed the best fit for the final project.
+		
+	Design guidelines
+		Generally, I wanted to implement a super clean design throughout this project. So intended to keep it as minimalist as possible. 
+		This meant stripping away a lot of information and designing the HTML and CSS in such a way to keep the website functional 
+		but very clean. Basic colours and a lot of padding were essential in this design. 
 		
 	getnews()
 		Instead of making a separate function for each type of milk, I decided to let getnews() function to allow any type of milk
@@ -34,8 +39,10 @@ Design
 		the current news to the user in different emails and formatting depending on their milk style. Then it updates the time in the txt file.
 	
 	Dynamic resizing
-		This involved a lot of research and some fancy CSS. Using calc( VW+ VH) was a useful tool in allowing elements to dynamically resize.
-		
+		This involved a lot of research and some fancy CSS. Using calc(VW+ VH) was a useful tool in allowing elements to dynamically resize.
+		Also  image css involved using percentages rather than fixed values. 
+	
+	
 		
 
 	

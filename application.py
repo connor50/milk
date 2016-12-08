@@ -180,9 +180,6 @@ def index():
     else:
         return render_template("index.html")
 
-@app.route("/success", methods = ["GET"])
-def success():
-    return render_template("success.html")
 @app.route("/deliver", methods=["GET", "POST"])
 def deliver():
     if request.method == "POST":

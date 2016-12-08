@@ -29,7 +29,7 @@ Sometimes serving milk may flash for a while. The news api requests take a while
 
 Email does not send until 24 hours have passed as it is tied into the webpage get request. This
 means in production, as long as users visited the site, the check would be performed and the email would be sent.
-To verify this, you can change the value of date.txt to an epoch period that is more than 24 hours (84600 seconds) than the current epoch time
+To verify this, you can change the value of date.txt to an epoch period that is less than 24 hours (84600 seconds) than the current epoch time
 then if you reload the page, the email will be sent. 
 
 

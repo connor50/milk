@@ -4,11 +4,14 @@
     Home.
 {% endblock %}
 {% block main %}
+
+<!-- header information -->
 <div id="type">
 	<a href="{{ url_for('index') }}"><img id ="arrow" src="static/arrow.svg" alt="back"></a>
 	<h1 style="color:#3F1F09;"> {{ milk }}</h1>
 </div>
 
+<!-- renders each article from news data for this particular type of milk -->
 {% for article in news %}
 	<article>
 	<a href={{ article.url }}><img src= {{ article.urlToImage }}></></a>
