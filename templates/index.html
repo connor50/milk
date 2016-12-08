@@ -21,12 +21,14 @@
 
 
 <form id="img_cont"action="{{ url_for('index') }}" method="post" onsubmit="load()">
+    <div id="wrapper">
   <div id="milk"/><button type="submit" name="milk" value="chocolate"><img src="https://soylent-production-herokuapp-com.
 global.ssl.fastly.net/static/images/home/coffiest.d1308ee2bb8b.jpg"></button></div>
     <div id="milk"/><button type="submit" name="milk" value="skimmed"><img src="https://soylent-production-herokuapp-com.
 global.ssl.fastly.net/static/images/home/coffiest.d1308ee2bb8b.jpg"></button></div>
   <div id="milk"/><button type="submit" name="milk" value="whole"><img src="https://soylent-production-herokuapp-com.
 global.ssl.fastly.net/static/images/home/coffiest.d1308ee2bb8b.jpg"></button></div>
+</div>
 </form>
 
 <!-- <form id="politics" action="{{ url_for('index') }}" method="post">
@@ -34,7 +36,8 @@ global.ssl.fastly.net/static/images/home/coffiest.d1308ee2bb8b.jpg"></button></d
 </form>
 --> 
 
-<a id= "delete" href="{{ url_for('deliver') }}"><button><h1 style="color: white;">deliver my milk</h1></button></a>
+<a id= "delete" href="{{ url_for('deliver') }}"><button><h1 style="color: white; font-size: calc(2rem + 2vw);">deliver my milk</h1></button></a>
   <div id="load" style="display: none;"><h1>serving milk...</h1></div>
-  
+ 
+ <a id= "delete" href="{{ url_for('success')}}"><button><h1 style="color: white; font-size: calc(2rem + 2vw);">check</h1></button></a>
 {% endblock %}

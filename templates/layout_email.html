@@ -4,16 +4,14 @@
     <meta charset="utf-8">
     
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Roboto+Condensed|Open+Sans:800|Crimson+Text:400,400italic,700" rel="stylesheet">
-    <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet"/>
+
     
     <title>Milk {% block title %} {% endblock %}</title>
   </head>
   <body>
     <header>
-      <a href="{{ url_for('index')}}"><h1 style="color: white;">Milk.</h1></a>
-      <h2 style="color: white;">What milk do you want today?</h2>
+      <h1 style="color: white;">Milk.</h1></a>
     </header>
-    
     <main>
       {% block main %} {% endblock %}
     </main>

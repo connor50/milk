@@ -1,13 +1,7 @@
-{% extends "layout.html" %}
-
-{% block title %}
-    Home.
-{% endblock %}
+{% extends "layout_email.html" %}
 {% block main %}
-<div id="type">
-		<a href="{{ url_for('index') }}"><img id ="arrow" src="static/arrow.svg" alt="back"></a>
-	<h1> {{ milk }}</h1>
-</div>
+	<H1> Milk. </H1>
+	<h1 style="color:#3F1F09;"> This is {{ milk }} milk. Enjoy sweet chocolate news, delivered to your doorstep (sort of). </h1>
 
 {% for article in news %}
 	<article>

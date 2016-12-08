@@ -1,0 +1,12 @@
+{% extends "layout_email.html" %}
+{% block main %}
+	<H1> Milk. </H1>
+		<h1 style="color:black;"> This is {{ milk }} milk. Enjoy fat free news, delivered to your doorstep (sort of). </h1>
+</div>
+{% for article in news %}
+	<article>
+	<h2>{{ article.title }}</h2>
+	<p>{{ article.description }}</p>
+	</article>
+	{% endfor %}
+{% endblock %}
