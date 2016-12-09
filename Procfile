@@ -1,1 +1,1 @@
-web: gunicorn choosemilk:app
+web: python application.py
