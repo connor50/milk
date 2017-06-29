@@ -47,13 +47,29 @@ def getnews(milk):
     ap = requests.get("https://newsapi.org/v1/articles?source=associated-press&sortBy=top&apiKey=6ef0dce6d16e45ffa1fdd01274f57bc2")
     ap = ap.json()
 
+    abc = requests.get("https://newsapi.org/v1/articles?source=abc-news-au&sortBy=top&apiKey=6ef0dce6d16e45ffa1fdd01274f57bc2")
+    abc = abc.json()
+
     bbcsport = requests.get("https://newsapi.org/v1/articles?source=bbc-sport&sortBy=top&apiKey=6ef0dce6d16e45ffa1fdd01274f57bc2")
     bbcsport = bbcsport.json()
+
+    binsider = requests.get("https://newsapi.org/v1/articles?source=business-insider&sortBy=top&apiKey=6ef0dce6d16e45ffa1fdd01274f57bc2")
+    binsider = binsider.json()
+
+    eweekly = requests.get("https://newsapi.org/v1/articles?source=entertainment-weekly&sortBy=top&apiKey=6ef0dce6d16e45ffa1fdd01274f57bc2")
+    eweekly = eweekly.json()
+
+    ftimes = requests.get("https://newsapi.org/v1/articles?source=financial-times&sortBy=top&apiKey=6ef0dce6d16e45ffa1fdd01274f57bc2")
+    ftimes = ftimes.json()
+
+    mashable = requests.get("https://newsapi.org/v1/articles?source=mashable&sortBy=top&apiKey=6ef0dce6d16e45ffa1fdd01274f57bc2")
+    mashable = mashable.json()
 
 
     """ combine articles from json sources """
     news = bbc['articles'] + nytimes['articles'] + google['articles'] + independent['articles'] + economist['articles'] \
-    + guardian['articles'] + buzz['articles'] + ap['articles']  + bbcsport['articles']
+    + guardian['articles'] + buzz['articles'] + ap['articles'] + abc['articles'] + bbcsport['articles'] + binsider['articles'] \
+    + eweekly['articles'] + ftimes['articles'] + mashable['articles']
 
     """ clean up article issues """
     for description in news[:]:
