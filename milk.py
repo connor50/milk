@@ -98,3 +98,6 @@ def index():
             return render_template("whole.html", milk=session['milk'], news=news)
     else:
         return render_template("index.html")
+
+if __name__ == "__main__":
+	app.run()
