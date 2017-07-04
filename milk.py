@@ -71,9 +71,13 @@ def getnews(milk):
     + guardian['articles'] + buzz['articles'] + ap['articles'] + abc['articles'] + bbcsport['articles'] + binsider['articles'] \
     + eweekly['articles'] + ftimes['articles'] + mashable['articles']
 
+
+
     """ clean up article issues """
     for description in news[:]:
         if description['description'] is None:
+            news.remove(description)
+        if 'Trump' in description['title']:
             news.remove(description)
 
     """ sentiment analysis for good news """

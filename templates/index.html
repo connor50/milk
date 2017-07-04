@@ -16,6 +16,19 @@
 
 </script>
 
+<!-- Tracking for Googles -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-81206006-3', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
 <h1 id= "title"> CHOOSE MILK.</h1>
 <!-- form for selecting type of milk based on images -->
 <form id="img_cont"action="{{ url_for('index') }}" method="post" onsubmit="load()">
