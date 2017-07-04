@@ -52,7 +52,7 @@ button:hover {
 
 
 article img {
-  width: 70%;
+  width: 90%;
   background-color: white;
   margin: auto;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -199,4 +199,35 @@ select#soflow, select#soflow-color {
    text-overflow: ellipsis;
    white-space: nowrap;
    width: 300px;
+}
+
+@media only screen and (max-width: 480px), only screen and (max-device-width: 480px) {
+   /* CSS overrides for mobile here */
+  article img {
+    width: 100%;
+    background-color: white;
+    margin: auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  p {
+    margin: 0;
+    padding: 0;
+    font-size: calc(1rem + 1vw);
+  }
+  h5 {
+  display: none;
+  }
+  article {
+    padding: 1rem;
+  }
+  h1 {
+    padding: 1rem;
+  }
+}
+
+blink {
+-webkit-animation-name: blink;
+-webkit-animation-iteration-count: infinite;
+-webkit-animation-timing-function: cubic-bezier(1.0,0,0,1.0);
+-webkit-animation-duration: 1s;
 }
