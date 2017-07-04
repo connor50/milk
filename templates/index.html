@@ -4,7 +4,6 @@
     Home.
 {% endblock %}
 {% block main %}
-
 <!-- JS for the function when serving milk, it clears the main page -->
 <script type="text/javascript">
   function load() {
@@ -33,12 +32,12 @@
 <!-- form for selecting type of milk based on images -->
 <form id="img_cont"action="{{ url_for('index') }}" method="post" onsubmit="load()">
     <div id="wrapper">
+      <div id="milk"/><button type="submit" name="milk" value="whole"><img src="static/whole.png"></button></div>
       <div id="milk"/><button type="submit" name="milk" value="chocolate"><img src="static/chocolate.png"></button></div>
       <div id="milk"/><button type="submit" name="milk" value="skimmed"><img src="static/skimmed.png"></button></div>
-      <div id="milk"/><button type="submit" name="milk" value="whole"><img src="static/whole.png"></button></div>
     </div>
 </form>
 
-<div id="load" style="display: none;"><h1>serving milk...</h1></div>
 
+<div id="load" style="display: none;"><h1>serving milk...</h1></div>
 {% endblock %}

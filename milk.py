@@ -77,7 +77,7 @@ def getnews(milk):
     for description in news[:]:
         if description['description'] is None:
             news.remove(description)
-        if 'Trump' in description['title']:
+        elif 'Trump' in description['title']:
             news.remove(description)
 
     """ sentiment analysis for good news """

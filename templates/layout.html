@@ -2,19 +2,22 @@
 <html>
   <head>
     <meta charset="utf-8">
-    
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Roboto+Condensed|Open+Sans:800|Crimson+Text:400,400italic,700" rel="stylesheet">
     <link href="{{ url_for('static', filename='styles.css') }}" rel="stylesheet"/>
-    
     <title>Milk {% block title %} {% endblock %}</title>
   </head>
   <body>
     <header>
-      <a href="{{ url_for('index')}}"><h1 style="color: white;">Milk.</h1></a>
+      <a href="{{ url_for('index')}}"><h1 style="color: white;">Milk.</h1> <h5 style="color: white; text-align: center;"></a> <a href="">[FRESH NEWS FILTERED LIKE MILK.]</> </h5>
+
     </header>
     <main>
       {% block main %} {% endblock %}
     </main>
-    
+    <footer>
+      <a href="http://iamconnor.com"><h5 style=" color:#E8E8EE; margin: auto; text-align: center;"> Made by Connor Doyle</></h5>
+    </footer>
   </body>
 </html>
